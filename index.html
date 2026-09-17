@@ -13,82 +13,72 @@
 <body>
 
   <header class="topbar">
-    <a href="https://framesbyestelle.netlify.app/" class="topbar-logo">framesbyestelle</a>
-    <a href="https://framesbyestelle.netlify.app/" class="topbar-back">&#8592; Back to portfolio</a>
+    <a href="index.html" class="topbar-logo">framesbyestelle</a>
+    <nav class="topbar-tabs" aria-label="Support site navigation">
+      <a href="index.html">Home</a>
+      <a href="membership.html">Membership</a>
+      <a href="posts.html">Posts</a>
+      <a href="wishlist.html">Wishlist</a>
+    </nav>
+    <a href="https://framesbyestelle.netlify.app/" class="topbar-back">Portfolio &#8594;</a>
   </header>
 
   <main>
 
-    <!-- ── HEADER ── -->
-    <section class="section pt-top" aria-labelledby="support-heading">
-      <div class="container">
-        <header class="support-header">
-          <p class="section-label">Buy me a coffee</p>
-          <h1 class="section-title" id="support-heading">Help me gear up.</h1>
-          <div class="divider" aria-hidden="true"></div>
-          <p class="support-intro">
-            If a photo I've taken has ever made you smile, consider chipping in toward my next lens, light, or
-            memory card. Every coffee goes directly back into the equipment I use to shoot your events, portraits,
-            and everything in between — no middleman, just gear.
-          </p>
+    <div class="banner">
+      <img src="images/hero.jpg" alt="" loading="eager">
+      <div class="banner-vignette" aria-hidden="true"></div>
+    </div>
 
-          <!--
-            TODO (Estelle): create your account at https://www.buymeacoffee.com and replace
-            "framesbyestelle" below with your actual username once it's live. Until then this
-            link points to a placeholder page.
-          -->
-          <a class="bmc-button" href="https://www.buymeacoffee.com/framesbyestelle" target="_blank" rel="noopener noreferrer" aria-label="Buy me a coffee">
-            <span class="bmc-button-icon" aria-hidden="true">&#9749;</span>
-            <span>Buy me a coffee</span>
-          </a>
-          <p class="support-note">Opens Buy Me a Coffee in a new tab &middot; one-off or monthly, your call</p>
-        </header>
+    <div class="profile-row">
+      <img class="profile-avatar" src="images/profile.jpg" alt="Estelle Huy">
+      <div class="profile-row-text">
+        <h1 class="profile-name">Estelle</h1>
+        <p class="profile-tagline">Event photography &amp; portraits &middot; Montreal</p>
       </div>
-    </section>
+    </div>
 
-    <!-- ── WHERE IT GOES ── -->
-    <section class="section" style="padding-top: 0;" aria-labelledby="gear-heading">
+    <section class="section" aria-label="Support Estelle">
       <div class="container">
-        <p class="section-label">Where it goes</p>
-        <h2 class="section-title" id="gear-heading">The current wishlist</h2>
-        <div class="divider" aria-hidden="true"></div>
+        <div class="home-grid">
 
-        <div class="gear-grid" role="list">
-          <div class="gear-card" role="listitem">
-            <span class="gear-card-icon" aria-hidden="true">&#128247;</span>
-            <div class="gear-card-label">Fast prime lens</div>
-            <div class="gear-card-text">Sharper, low-light glass for receptions and dim venues.</div>
+          <!-- About -->
+          <div>
+            <h2 class="about-card-title">About</h2>
+            <p class="about-card-text">
+              Hey, I'm Estelle. I shoot event photography, portraits, and editorial work around Montreal — everything
+              from galas and frosh events to quiet portrait sessions. If a photo I've taken has ever made you smile,
+              consider chipping in toward my next lens, light, or memory card. Every coffee goes directly back into
+              the gear I use to shoot your events. No middleman, just gear.
+            </p>
+            <div class="about-socials" aria-label="Social links">
+              <a href="https://www.instagram.com/framesbyestelle/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">&#128247;</a>
+              <a href="https://www.youtube.com/@framesbyestelle" target="_blank" rel="noopener noreferrer" aria-label="YouTube">&#9654;</a>
+              <a href="mailto:framesbyestelle@gmail.com" aria-label="Email">&#9993;</a>
+            </div>
           </div>
-          <div class="gear-card" role="listitem">
-            <span class="gear-card-icon" aria-hidden="true">&#9889;</span>
-            <div class="gear-card-label">Off-camera lighting</div>
-            <div class="gear-card-text">Speedlights and modifiers for cleaner portraits after dark.</div>
+
+          <!-- Coffee widget -->
+          <div class="coffee-card">
+            <h2 class="coffee-card-title">Buy me a coffee</h2>
+            <div class="coffee-picker" role="group" aria-label="Choose how many coffees">
+              <button type="button" data-count="1" class="selected">&#9749; &times;1</button>
+              <button type="button" data-count="3">&#9749; &times;3</button>
+              <button type="button" data-count="5">&#9749; &times;5</button>
+              <button type="button" data-count="10">&#9749; &times;10</button>
+            </div>
+
+            <!--
+              TODO (Estelle): create your account at https://www.buymeacoffee.com and replace
+              "framesbyestelle" below with your real page URL once it's live.
+            -->
+            <a class="btn-solid" data-bmc-link href="https://www.buymeacoffee.com/framesbyestelle" target="_blank" rel="noopener noreferrer">
+              &#9749;&#65039;&nbsp; Buy 1 coffee
+            </a>
+            <p class="coffee-note">Opens Buy Me a Coffee in a new tab &middot; one-off or monthly, your call</p>
           </div>
-          <div class="gear-card" role="listitem">
-            <span class="gear-card-icon" aria-hidden="true">&#128190;</span>
-            <div class="gear-card-label">Storage &amp; backup</div>
-            <div class="gear-card-text">More cards and drives so a full gallery is never at risk.</div>
-          </div>
-          <div class="gear-card" role="listitem">
-            <span class="gear-card-icon" aria-hidden="true">&#128268;</span>
-            <div class="gear-card-label">Batteries &amp; backups</div>
-            <div class="gear-card-text">Spares so a long gala or wedding never runs out of power.</div>
-          </div>
+
         </div>
-      </div>
-    </section>
-
-    <!-- ── ALTERNATE WAYS ── -->
-    <section class="section" style="padding-top: 0;" aria-labelledby="other-heading">
-      <div class="container">
-        <p class="section-label">Prefer another way?</p>
-        <h2 class="section-title" id="other-heading" style="font-size: clamp(1.5rem, 3vw, 2rem);">
-          Book a session or just say hi.
-        </h2>
-        <p class="support-intro" style="margin-top: 0.75rem;">
-          Hiring me for your next event supports the gear fund just as much as a coffee does.
-        </p>
-        <a href="https://framesbyestelle.netlify.app/contact.html" class="btn" style="margin-top: 1.5rem;"><span>Get in touch &nbsp;&#8594;</span></a>
       </div>
     </section>
 
@@ -104,5 +94,6 @@
     <p class="footer-copy">&copy; 2025 framesbyestelle</p>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>

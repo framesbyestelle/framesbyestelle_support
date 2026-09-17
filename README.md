@@ -1,19 +1,33 @@
 # framesbyestelle — Support
 
-Standalone "buy me a coffee" style page to help fund camera gear, kept
-separate from the main [framesbyestelle-portfolio](../framesbyestelle-portfolio)
-site so it can be deployed and updated independently.
+A "buy me a coffee" style site to help fund camera gear, modeled on
+creator support pages like Buy Me a Coffee's own creator profiles
+(Home / Membership / Posts / Wishlist). Kept separate from the main
+[framesbyestelle-portfolio](../framesbyestelle-portfolio) site so it can be
+linked from YouTube/Instagram and updated independently — the portfolio
+is only linked to from here, not merged into it.
+
+## Pages
+
+- `index.html` — Home: banner, about, and the "buy a coffee" widget.
+- `membership.html` — placeholder monthly membership tiers.
+- `posts.html` — static update posts (no backend/CMS).
+- `wishlist.html` — camera gear wishlist with funding progress bars.
 
 ## Before going live
 
 - Create an account at [buymeacoffee.com](https://www.buymeacoffee.com) and
-  replace the placeholder link in `index.html` (search for `TODO`) with your
-  real page URL.
-- Update the "Back to portfolio" and footer links in `index.html` to point at
-  your actual portfolio domain once both sites are deployed.
+  replace the placeholder links (search for `TODO` in each file) with your
+  real page/membership URLs.
+- Rewrite the membership tier names, prices, and perks in `membership.html`
+  to match what you actually want to offer.
+- Everything is static — there's no backend tracking real donations. Update
+  the wishlist progress bars (`wishlist-bar-fill` width %) and the "raised"
+  dollar amounts by hand as you actually save up for each item.
+- To add a new post, copy a `<a class="post-card">` block in `posts.html`.
 
 ## Deploying
 
-This is a static site — no build step. Deploy the folder as-is to Netlify,
-Vercel, GitHub Pages, or any static host. A `netlify.toml` is included for
-a one-click Netlify deploy.
+No build step. Currently deployed via GitHub Pages from the `main` branch
+(see repo settings). A `netlify.toml` is also included if you'd rather move
+it to Netlify later.
